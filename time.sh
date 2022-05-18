@@ -1,8 +1,3 @@
-export INSTANA_AGENT_KEY="qUMhYJxjSv6uZh2SyqTEnw"
-
-sudo docker compose build
-sudo nohup docker compose up >/dev/null 2>&1
-
 current=`date "+%Y-%m-%d %H:%M:%S"`
 timeStamp=`date -d "$current" +%s`
 currentTimeStamp=$((timeStamp*1000+`date "+%N"`/1000000))
