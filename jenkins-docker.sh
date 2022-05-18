@@ -7,6 +7,7 @@ docker compose build
 echo start up
 nohup docker compose up >/dev/null 2>&1 &
 
+
 current=`date "+%Y-%m-%d %H:%M:%S"`
 timeStamp=`date -d "$current" +%s`
 currentTimeStamp=$((timeStamp*1000+`date "+%N"`/1000000))
