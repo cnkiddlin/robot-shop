@@ -3,4 +3,4 @@
 *-private.*
 vendor/
 Gopkg.lock
-output.txt
+nohup.out
