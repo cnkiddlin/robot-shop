@@ -18,5 +18,6 @@ cd K8s
 helm install robot-shop --set openshift=true --set image.repo=kiddlin -n robot-shop --set image.version=2.1.0 helm
 sleep 1m
 
+
 oc project robot-shop
 oc expose web
