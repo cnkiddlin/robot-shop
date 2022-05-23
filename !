@@ -1,0 +1,3 @@
+#!/bin/bash
+line=`cat .env |head -n 2|tail -n 1`
+echo $line
