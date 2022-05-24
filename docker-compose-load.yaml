@@ -7,7 +7,7 @@ services:
     environment:
       HOST: http://web:8080
     networks:
-      - robot-shop
+      - robot-shop-docker_robot-shop
     depends_on:
       - web
     logging: &logging
