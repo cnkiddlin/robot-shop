@@ -12,7 +12,9 @@ version=${line: 4}
 
 current=`date "+%Y-%m-%d %H:%M:%S"`
 timeStamp=`date -d "$current" +%s`
-currentTimeStamp=$((timeStamp*1000+`date "+%N"`/1000000))
-sudo curl -X POST https://159.23.91.46/api/releases -H "Authorization: apiToken 0howH44PRw2Aj2-3yg_BLQ" -H "Content-Type: application/json" -d '{"name": "'${version}'", "start": '${currentTimeStamp}', "applications": [{"name": "robot-shop-docker"}]}' -k
+Date=`date "+%N"`
+currentTimeStamp=$((timeStamp*1000+$((10#$Date))/1000000))
+
+curl -X POST https://159.23.91.46/api/releases -H "Authorization: apiToken 0howH44PRw2Aj2-3yg_BLQ" -H "Content-Type: application/json" -d '{"name": "'${version}'", "start": '${currentTimeStamp}', "applications": [{"name": "robot-shop-docker"}]}' -k
 
 
