@@ -73,8 +73,8 @@ def pay(id):
     has_shipping = False
     for item in cart.get('items'):
         if item.get('sku') == 'SHIP':
-            has_shipping = True
-            #has_shipping = False
+            #has_shipping = True
+            has_shipping = False
 
     if cart.get('total', 0) == 0 or has_shipping == False:
         app.logger.warn('cart not valid')
