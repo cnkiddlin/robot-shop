@@ -15,6 +15,6 @@ timeStamp=`date -d "$current" +%s`
 Date=`date "+%N"`
 currentTimeStamp=$((timeStamp*1000+$((10#$Date))/1000000))
 
-curl -X POST https://159.23.91.46/api/releases -H "Authorization: apiToken 0howH44PRw2Aj2-3yg_BLQ" -H "Content-Type: application/json" -d '{"name": "New Version: '${version}'", "start": '${currentTimeStamp}', "applications": [{"name": "robot-shop-docker"}]}' -k
+curl -X POST https://159.23.91.46/api/releases -H "Authorization: apiToken 0howH44PRw2Aj2-3yg_BLQ" -H "Content-Type: application/json" -d '{"name": "'${version}'", "start": '${currentTimeStamp}', "applications": [{"name": "robot-shop-docker"}]}' -k
 
 
