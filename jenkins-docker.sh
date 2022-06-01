@@ -5,6 +5,7 @@ echo start build
 sudo docker compose build
 
 echo start up
+sudo docker stop `sudo docker ps -aq`
 sudo nohup docker compose up >/dev/null 2>&1 &
 
 line=`cat .env |head -n 3|tail -n 1`
