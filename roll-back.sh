@@ -3,7 +3,7 @@ sudo docker stop `docker ps -aq`
 
 sudo sed -i 's/2.2.0/2.1.0/' .env
 
-sudo docker compose up
+sudo nohup docker compose up >/dev/null 2>&1 &
 
 current=`date "+%Y-%m-%d %H:%M:%S"`
 timeStamp=`date -d "$current" +%s`
