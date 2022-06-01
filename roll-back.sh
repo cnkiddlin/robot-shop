@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo docker stop `docker ps -aq`
+sudo docker stop `sudo docker ps -aq`
 
 sudo sed -i 's/2.2.0/2.1.0/' .env
 
